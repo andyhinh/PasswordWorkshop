@@ -1,7 +1,7 @@
 # Password Workshop
 CougarCS 4th Meeting - Password Awareness
 
-cougarcs.com
+<a href="cougarcs.com">CougarCS.com</a>
 # Introduction
 Introductory workshop on giving an awareness of how easily passwords can be cracked by using John the Ripper and how to create better-secured passwords for personal computers, websites, and servers. Many people use passwords that are easy for them to remember like "Password", "andyisgreat", or "BlameAaron", but that is what makes you vulnerable to hackers. 
 
