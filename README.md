@@ -18,13 +18,35 @@ https://www.kali.org/downloads/
 
 I will be running Kali Linux on VMWare. You can use other VM or an actual kali linux operated computer.
 <ul>
-<li>
-Of course, you can get John the Ripper on any operating system here: http://www.openwall.com/john/
-</li>
-<li>
-They all have the same commands and syntax to use it.
-</li>
+    <li>
+        Of course, you can get John the Ripper on any operating system here: http://www.openwall.com/john/
+    </li>
+    <li>
+        They all have the same commands and syntax to use it.
+    </li>
 </ul>
+#Before We Start
+John the Ripper (JtR) has three modes that it automatically uses: "WordList", "Single Crack", "Incremental"
+
+WordList:
+<ul>
+    <li>
+    It will take the likelyhood of certain words being used together and uses words or phrases to crack the code.
+    </li>
+</ul>
+Single Crack:
+<ul>
+    <li>
+        It will take the username or any additional information given to be used to its advantage. If there is multply accounts it was         being fed from, it will use any passwords it cracked to be used against the rest as well as, the same salt. I will explain            salt later in the workshop.
+    </li>
+</ul>
+Incremental:
+<ul>
+    <li>
+        Most powerful mode. This is also known as brute force. It will use <b>EVERY</b> possible combination. This takes the longest         time.
+    </li>
+</ul>
+The order of which JtR tries is: Single Crack, WordList, and lastly Incremental
 # SQL Password Crack
 1.) In Kali Linux, open the terminal and open leafpad.
 
@@ -39,15 +61,19 @@ They all have the same commands and syntax to use it.
     john@localhost:*C0839795BF730B452C7ABC2F60FC166E0F64D710
     fred@localhost:*7345CA5D78F17B2F76875F87C939B36089FB57F5
     matt@localhost:*668425423DB5193AF921380129F465A6425216D0
-    
+<ul>
+    <li>
+        This SHA1 format
+    </li>
+</ul>
 3.) Save and Exit.
 
 4.) On the terminal type this:
     john fileName
 <ul>
-<li>
-fileName = the file where you stored the .txt example above
-</li>
+    <li>
+        fileName = the file where you stored the .txt example above
+    </li>
 </ul>
 # Unix & Linux Password Crack
 1.) Open terminal and type this to Copy and Paste onto the current directory:
@@ -55,19 +81,20 @@ fileName = the file where you stored the .txt example above
         root@kali:~# cp /etc/passwd passwd
         //cp = copy&paste, /etc/passwd = target location, passwd = name of the copied file
 
-2.) Try and Use John the Ripper (JtR) on it.
+2.) Try and Use JtR on it.
 <ul>
-<li>
-You will notice how JtR does not detect a password hash because if you look inside the file, there is no password hash in the designated area. Linux has a 2-step process to get the password.
-</li>
+    <li>
+        You will notice how JtR does not detect a password hash because if you look inside the file, there is no password hash in the         designated area. Linux has a 2-step process to get the password.
+    </li>
 </ul>
 3.) You will need to grab the shadow file:
 
         root@kali:~# cp /etc/shadow
 <ul>
-<li>
-This file has the password hash. The shadow file can be called the salt for the password file. Salt is like an additional piece of data that would hash the password again.
-</li>
+    <li>
+        This file has the password hash. The shadow file can be called the salt for the password file. Salt is like an additional
+        piece of data that would hash the password again.
+    </li>
 </ul>
 4.) You will need to combine them together in order to find the password:
 
@@ -85,7 +112,22 @@ This file has the password hash. The shadow file can be called the salt for the 
 
 7.) (Optional Practice) I have included two more .txt files on this repo. Try them out and notice how JtR is unable to do all of them. Some requires additional edits on the rules in JtR to crack them.
 #Conclusion
+Cyber security is really important today. There is constantly news revolving around security, privacy, you name it. This workshop is to give awareness of potentially how easy it is to get hacked into if your password is simple. There are multiple solutions to fix this on different levels.
 
+If it is a website or database with sensitive information:
+<ul>
+    <li>
+        Has a unique salt for each individual account. 
+    </li>
+</ul>
+If it is a personal computer:
+<ul>
+    <li>
+        <b>Never</b> leave you computer unattended like at the library. Who knows if someone takes your computer. You think it is safe since you have a password, but people would have multiple ways to get into your computer.
+    </li>
+    <li>
+        Do not make your passwords simple or the same as every other accounts you have. There are ways that hackers can get your password via WiFi, viruses, keylogging. If your password is the same, they most likely have already grabbed your email(s) and would get into sensitive information.
+    </li>
 # FAQ
 <h4>How come I did not show Windows?</h4>
 
