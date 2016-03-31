@@ -16,12 +16,12 @@ I acknowledge, the provided tools are not authored by Andy Hinh and in many case
 Under no circumstances shall Andy Hinh or other companies, including organizations, related to Andy Hinh or this workshop be responsible or liable for any loss of data or income or any special, incidental, consequential or indirect damages howsoever caused as a result of usage, practice, demonstration or re-education of these methodologies, techniques, and tools within this workshop.
 # Set-up
 We will be using Kali Linux as it already has John the Ripper pre-installed. 
-https://www.kali.org/downloads/
+<a href="https://www.kali.org/downloads/">Kali Linux</a>
 
 I will be running Kali Linux on VMWare. You can use other VM or an actual Kali Linux operated computer.
 <ul>
     <li>
-        Of course, you can get John the Ripper on any operating system, as it is open-sourced, here: http://www.openwall.com/john/
+        Of course, you can get John the Ripper on any operating system, as it is open-sourced, here: <a href= "http://www.openwall.com/john/">John the Ripper</a>
     </li>
     <li>
         They all have the same commands and syntax to use it.
