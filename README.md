@@ -8,7 +8,7 @@ Introductory workshop on giving an awareness of how easily passwords can be crac
 Today, I will be demonstrating how easy it is to break these simple passwords. I will not be teaching you how to do everything prior to breaking the password hashes like how to retrieve the hashes from various locations.
 
 
-# Users' Acknowledgement and Terms of Use
+# Users' Acknowledgment and Terms of Use
 I acknowledge that the provided tools and techniques are to educate, introduce and demonstrate various ethical hacking techniques. I should not use these techniques and tools for any illegal or malicious activities, and I should not use any of the described techniques and tools in an attempt to compromise any computer systems.
 
 I acknowledge, the provided tools are not authored by Andy Hinh and in many cases are submitted by the companies or security communities. While every reasonable effort is made to ensure that these programs do what is claimed, Andy Hinh will not be held accountable for any damage or distress caused by the proper or improper usage of these materials, and makes no guarantee in regards to their operation or suitability for any specific purpose.
@@ -21,7 +21,7 @@ We will be using <a href="https://www.kali.org/downloads/">Kali Linux</a> as it 
 I will be running Kali Linux on VMWare. You can use other VM or an actual Kali Linux operated computer.
 <ul>
     <li>
-        Of course, you can get <a href= "http://www.openwall.com/john/">John the Ripper</a> on any operating system, as it is open-sourced.
+        Of course, you can get <a href= "http://www.openwall.com/john/">John the Ripper</a> on any operating system as it is open-sourced.
     </li>
     <li>
         They all have the same commands and syntax to use it.
@@ -39,7 +39,7 @@ WordList:
 Single Crack:
 <ul>
     <li>
-        It will take the username or any additional information given to be used to its advantage. If there is multply accounts it was         being fed from, it will use any passwords it cracked to be used against the rest as well as, the same salt. I will explain            salt later in the workshop.
+        It will take the username or any additional information given to be used to its advantage. If there are multply accounts it was         being fed from, it will use any passwords it cracked to be used against the rest as well as, the same salt. I will explain            salt later in the workshop.
     </li>
 </ul>
 Incremental:
@@ -112,7 +112,7 @@ The order of which JtR tries is: Single Crack, WordList, and lastly Incremental
 
         root@kali:~# john --show unshadowed
 
-7.) (Optional Practice) I have included two more .txt files on this repo. Try them out and notice how JtR is unable to do all of them. Some requires additional edits on the rules and certain additional libraries in JtR to crack them.
+7.) (Optional Practice) I have included two more .txt files on this repo. Try them out and notice how JtR is unable to do all of them. Some require additional edits on the rules and certain additional libraries in JtR to crack them.
 #Conclusion
 Cyber security is really important today. There is constantly news revolving around security, privacy, you name it. This workshop is to give awareness of potentially how easy it is to get hacked into if your password is simple. There are multiple solutions to fix this on different levels.
 
@@ -128,13 +128,13 @@ If it is a personal computer:
         <b>Never</b> leave you computer unattended like at the library. Who knows if someone takes your computer. You think it is safe         since you have a password, but hackers would have multiple ways to get into your computer. I can tell you that it will take me         around 5 minutes to get your password. 
     </li>
     <li>
-        Do not make your passwords simple or the same as every other accounts you have. There are ways that hackers can get your password via WiFi, viruses, keylogging. If your password is the same, they most likely have already grabbed your email(s) and would get into your sensitive information.
+        Do not make your passwords simple or the same as every other account you have. There are multiple ways that hackers can get your password via WiFi, viruses, keylogging. If your password is the same, they most likely have already grabbed your email(s) and would get into your sensitive information.
     </li>
 </ul>
 # FAQ
 <h4>How come I did not show Windows?</h4>
 
-        Windows is ideally identical to Linux or Unix but instead it only has a one-step process, it does not have shadow. 
+        Windows is ideally identical to Linux or Unix but instead it only has a one-step process, it does not have shadow file. 
         The purpose of this workshop is for me to show you how easily it is to break a password,
         not how to retreive the password hashes.
 
