@@ -1,7 +1,7 @@
 # Password Workshop
 CougarCS 4th Meeting - Password Awareness
 # Introduction
-Introductory workshop on giving an awareness of how easily passwords can be cracked and how to create better-secured passwords for personal computers, websites, and servers by using John the Ripper. Many people use passwords that are easy for them to remember like "Password", "andyisgreat", or "Blameaaron", but that is what makes you vulnerable to hackers. 
+Introductory workshop on giving an awareness of how easily passwords can be cracked by using John the Ripper and how to create better-secured passwords for personal computers, websites, and servers. Many people use passwords that are easy for them to remember like "Password", "andyisgreat", or "Blameaaron", but that is what makes you vulnerable to hackers. 
 
 Today, I will be demonstrating how easy it is to break these simple passwords. I will not be teaching you how to do everything prior to breaking the password hashes like how to retrieve the hashes from various locations.
 
@@ -16,16 +16,16 @@ Under no circumstances shall Andy Hinh or other companies, including organizatio
 We will be using Kali Linux as it already has John the Ripper pre-installed. 
 https://www.kali.org/downloads/
 
-I will be running Kali Linux on VMWare. You can use other VM or an actual kali linux operated computer.
+I will be running Kali Linux on VMWare. You can use other VM or an actual Kali Linux operated computer.
 <ul>
     <li>
-        Of course, you can get John the Ripper on any operating system here: http://www.openwall.com/john/
+        Of course, you can get John the Ripper on any operating system, as it is open-sourced, here: http://www.openwall.com/john/
     </li>
     <li>
         They all have the same commands and syntax to use it.
     </li>
 </ul>
-#Before We Start
+#Before We Start, You Need to Know A Little About John
 John the Ripper (JtR) has three modes that it automatically uses: "WordList", "Single Crack", "Incremental"
 
 WordList:
@@ -63,7 +63,7 @@ The order of which JtR tries is: Single Crack, WordList, and lastly Incremental
     matt@localhost:*668425423DB5193AF921380129F465A6425216D0
 <ul>
     <li>
-        This SHA1 format
+        This is SHA1 format
     </li>
 </ul>
 3.) Save and Exit.
@@ -123,15 +123,15 @@ If it is a website or database with sensitive information:
 If it is a personal computer:
 <ul>
     <li>
-        <b>Never</b> leave you computer unattended like at the library. Who knows if someone takes your computer. You think it is safe since you have a password, but people would have multiple ways to get into your computer.
+        <b>Never</b> leave you computer unattended like at the library. Who knows if someone takes your computer. You think it is safe         since you have a password, but people would have multiple ways to get into your computer. I can tell you that it will take me         around 5 minutes to get your password. 
     </li>
     <li>
-        Do not make your passwords simple or the same as every other accounts you have. There are ways that hackers can get your password via WiFi, viruses, keylogging. If your password is the same, they most likely have already grabbed your email(s) and would get into sensitive information.
+        Do not make your passwords simple or the same as every other accounts you have. There are ways that hackers can get your password via WiFi, viruses, keylogging. If your password is the same, they most likely have already grabbed your email(s) and would get into your sensitive information.
     </li>
 # FAQ
 <h4>How come I did not show Windows?</h4>
 
-        Windows is ideally identical to Linux or Unix but only a one step process, does not have shadow. 
+        Windows is ideally identical to Linux or Unix but instead it only has a one-step process, it does not have shadow. 
         The purpose of this workshop is for me to show you how easily it is to break a password,
         not how to retreive the password hashes.
 
