@@ -24,6 +24,7 @@ They all have the same commands and syntax to use it.
 
     root@kali:~# leafpad <fileName>
   This will open up a file you call for. If there is not a file with that name, it will create a new .txt file.
+  
 2.) Copy and Paste this example in the .txt
     
     debian-sys-maint@localhost:*9CFB9D176640A6C1F1807C981334D0FAA44B3836
