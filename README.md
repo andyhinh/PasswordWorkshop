@@ -1,7 +1,7 @@
 # Password Workshop
 CougarCS 4th Meeting - Password Awareness
 # Introduction
-Introductory workshop on giving an awareness of how easily passwords can be cracked by using John the Ripper and how to create better-secured passwords for personal computers, websites, and servers. Many people use passwords that are easy for them to remember like "Password", "andyisgreat", or "Blameaaron", but that is what makes you vulnerable to hackers. 
+Introductory workshop on giving an awareness of how easily passwords can be cracked by using John the Ripper and how to create better-secured passwords for personal computers, websites, and servers. Many people use passwords that are easy for them to remember like "Password", "andyisgreat", or "BlameAaron", but that is what makes you vulnerable to hackers. 
 
 Today, I will be demonstrating how easy it is to break these simple passwords. I will not be teaching you how to do everything prior to breaking the password hashes like how to retrieve the hashes from various locations.
 
