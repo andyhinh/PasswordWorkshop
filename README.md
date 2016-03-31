@@ -16,9 +16,15 @@ Under no circumstances shall Andy Hinh or other companies, including organizatio
 We will be using Kali Linux as it already has John the Ripper pre-installed. 
 https://www.kali.org/downloads/
 
+I will be running Kali Linux on VMWare. You can use other VM or an actual kali linux operated computer.
+<ul>
+<li>
 Of course, you can get John the Ripper on any operating system here: http://www.openwall.com/john/
-
+</li>
+<li>
 They all have the same commands and syntax to use it.
+</li>
+</ul>
 # SQL Password Crack
 1.) In Kali Linux, open the terminal and open leafpad.
 
@@ -38,7 +44,54 @@ They all have the same commands and syntax to use it.
 
 4.) On the terminal type this:
     john fileName
-
+<ul>
+<li>
 fileName = the file where you stored the .txt example above
+</li>
+</ul>
+# Unix & Linux Password Crack
+1.) Open terminal and type this to Copy and Paste onto the current directory:
+
+        root@kali:~# cp /etc/passwd passwd
+        //cp = copy&paste, /etc/passwd = target location, passwd = name of the copied file
+
+2.) Try and Use John the Ripper (JtR) on it.
+<ul>
+<li>
+You will notice how JtR does not detect a password hash because if you look inside the file, there is no password hash in the designated area. Linux has a 2-step process to get the password.
+</li>
+</ul>
+3.) You will need to grab the shadow file:
+
+        root@kali:~# cp /etc/shadow
+<ul>
+<li>
+This file has the password hash. The shadow file can be called the salt for the password file. Salt is like an additional piece of data that would hash the password again.
+</li>
+</ul>
+4.) You will need to combine them together in order to find the password:
+
+        root@kali:~# unshadow passwd shadow > unshadowed
+        // unshadow = special command for combining the two documents, passwd & shadow = files to combine together,
+        // > unshadowed = new file location of both of them combined.
+
+5.) Now you can use JtR on it:
+
+        root@kali:~# john unshadowed
+
+6.) Process is done but you need to view it:
+
+        root@kali:~# john --show unshadowed
+
+7.) (Optional Practice) I have included two more .txt files on this repo. Try them out and notice how JtR is unable to do all of them. Some requires additional edits on the rules in JtR to crack them.
+#Conclusion
+
+# FAQ
+<h4>How come I did not show Windows?</h4>
+
+        Windows is ideally identical to Linux or Unix but only a one step process, does not have shadow. 
+        The purpose of this workshop is for me to show you how easily it is to break a password,
+        not how to retreive the password hashes.
+
 
 
