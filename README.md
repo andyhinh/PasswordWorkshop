@@ -110,7 +110,7 @@ The order of which JtR tries is: Single Crack, WordList, and lastly Incremental
 
         root@kali:~# john --show unshadowed
 
-7.) (Optional Practice) I have included two more .txt files on this repo. Try them out and notice how JtR is unable to do all of them. Some requires additional edits on the rules in JtR to crack them.
+7.) (Optional Practice) I have included two more .txt files on this repo. Try them out and notice how JtR is unable to do all of them. Some requires additional edits on the rules and certain additional libraries in JtR to crack them.
 #Conclusion
 Cyber security is really important today. There is constantly news revolving around security, privacy, you name it. This workshop is to give awareness of potentially how easy it is to get hacked into if your password is simple. There are multiple solutions to fix this on different levels.
 
@@ -123,11 +123,12 @@ If it is a website or database with sensitive information:
 If it is a personal computer:
 <ul>
     <li>
-        <b>Never</b> leave you computer unattended like at the library. Who knows if someone takes your computer. You think it is safe         since you have a password, but people would have multiple ways to get into your computer. I can tell you that it will take me         around 5 minutes to get your password. 
+        <b>Never</b> leave you computer unattended like at the library. Who knows if someone takes your computer. You think it is safe         since you have a password, but hackers would have multiple ways to get into your computer. I can tell you that it will take me         around 5 minutes to get your password. 
     </li>
     <li>
         Do not make your passwords simple or the same as every other accounts you have. There are ways that hackers can get your password via WiFi, viruses, keylogging. If your password is the same, they most likely have already grabbed your email(s) and would get into your sensitive information.
     </li>
+</ul>
 # FAQ
 <h4>How come I did not show Windows?</h4>
 
